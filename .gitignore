@@ -1,0 +1,29 @@
+# Cartelle di compilazione
+build/
+build-*/
+cmake-build-*/
+
+# File generati da CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Qt Creator
+*.user
+*.user.*
+.qtcreator/
+
+# File compilati
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+
+# File temporanei
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
