@@ -10,11 +10,13 @@ class AgendaUniversitaria {
 protected:
     QString titolo;
     QString descrizione;
-    QDate Data;
+    QDate data;
     Priority priority;
     bool completata;
 
 public:
+    AgendaUniversitaria(QString titolo, QString descrizione, QDate data, Priority priority, bool completata);
+
     virtual ~AgendaUniversitaria() = default;
     virtual QString riepilogo() const = 0;
     Priority getPriority() const ;
