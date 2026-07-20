@@ -18,6 +18,7 @@ qt_add_executable(ActivityManager
     model/AgendaUniversitaria.h
     model/Priority.h
     model/Lezione.h
+    model/Esame.h
 )
 
 target_include_directories(ActivityManager
