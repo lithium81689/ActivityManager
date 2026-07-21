@@ -35,12 +35,12 @@ public:
     bool isExpiring(const QDate& rifDate, const QTime& rifTime) const override;
 
     QString getMateria() const;
-    const QTime getOraInizio() const;
-    const QTime getOraFine() const;
-    const QString getLocation() const;
+    QTime getOraInizio() const;
+    QTime getOraFine() const;
+    const Location& getLocation() const;
 
 
-    void setMateria(const QString& materia) const;
+    void setMateria(const QString& materia);
     void setOraInizio(const QTime& oraInizio);
     void setOraFine(const QTime& oraFine);
     void setLocation(const Location& location);

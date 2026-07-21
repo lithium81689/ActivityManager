@@ -2,6 +2,8 @@
 #define AGENDAUNIVERSITARIA_H
 #include <QString>
 #include <QDate>
+#include <QTime>
+#include <QJsonObject>
 #include "Priority.h"
 
 
@@ -16,9 +18,9 @@ protected:
 
 public:
     AgendaUniversitaria(
-        QString titolo,
-        QString descrizione,
-        QDate data,
+        const QString& titolo,
+        const QString& descrizione,
+        const QDate& data,
         Priority priority,
         bool completata
     );
