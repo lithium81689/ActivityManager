@@ -4,6 +4,7 @@
 #include "AgendaUniversitaria.h"
 
 #include <QString>
+#include <QTime>
 #include <QJsonObject>
 
 class Consegna : public AgendaUniversitaria
@@ -27,16 +28,12 @@ public:
         );
 
     // Getter
-    QString getCorso() const;
-    QString getModalita() const;
-    QString getPiattaforma() const;
+    QString getMateria() const;
     QTime getOrarioConsegna() const;
     bool isLavoroDiGruppo() const;
 
     // Setter
-    void setCorso(const QString& corso);
-    void setModalita(const QString& modalita);
-    void setPiattaforma(const QString& piattaforma);
+    void setMateria(const QString& materia);
     void setOrarioConsegna(const QTime& consTime);
     void setLavoroDiGruppo(bool lavoroDiGruppo);
 

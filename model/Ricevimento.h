@@ -55,6 +55,7 @@ public:
     void setPrenotato(bool prenotato);
 
     // Metodi polimorfi
+    QString getType() const override;
     bool isExpiring(const QDate& rifDate, const QTime& rifTime) const override;
     QJsonObject toJson() const override;
     // void accept(Visitor& visitor) override;
