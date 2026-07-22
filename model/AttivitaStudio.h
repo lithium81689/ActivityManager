@@ -20,11 +20,31 @@ class AttivitaStudio : public AgendaUniversitaria {
             QDate& data,
             Priority priority,
             bool completata,
-            Qstring& materia,
-            Qstring& argomento,
+            QString& materia,
+            QString& argomento,
             int minutiPrevisti,
-            int minutiSvolti
-            )
+            int minutiSvolti)
+
+
+    //Getter
+        QString getMateria() const;
+        QString getArgomento() const;
+        int getMinutiPrevisti() const;
+        int getMinutiSvolti() const;
+
+    //Setter
+        void setMateria(QString& materia);
+        void setArgomento(QString& argomento);
+        void setMinutiPrevisti(int minutiPrevisti);
+        void setMinutiSvolti(int minutiPrevisti);
+
+
+    // Comportamenti polimorfi
+    // void accept(AgendaVisitor&)...
+    bool isExpiring(const QDate& date, const QTime& time) const override;
+    QString getType() const override;
+
+
 
 
 };
