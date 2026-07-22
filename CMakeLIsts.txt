@@ -25,6 +25,7 @@ qt_add_executable(ActivityManager
     model/Lezione.cpp
     model/Consegna.cpp
     model/Ricevimento.cpp
+    model/AgendaUniversitaria.cpp
 )
 
 target_include_directories(ActivityManager
