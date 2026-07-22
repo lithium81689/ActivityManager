@@ -23,9 +23,9 @@ private:
 
 public:
     Ricevimento(
-        const QString& titolo,
-        const QString& descrizione,
-        const QDate& data,
+        QString& titolo,
+        QString& descrizione,
+        QDate& data,
         Priority priority,
         const QString& docente,
         const QTime& oraInizio,
