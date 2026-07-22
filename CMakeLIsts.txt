@@ -25,11 +25,8 @@ qt_add_executable(ActivityManager
     model/Lezione.cpp
     model/Consegna.cpp
     model/Ricevimento.cpp
-<<<<<<< HEAD
     model/AgendaUniversitaria.cpp
-=======
     model/AttivitaStudio.h
->>>>>>> 01d8f26 (Inserito attivitaStudio)
 )
 
 target_include_directories(ActivityManager
