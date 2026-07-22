@@ -23,7 +23,7 @@ class AttivitaStudio : public AgendaUniversitaria {
             QString& materia,
             QString& argomento,
             int minutiPrevisti,
-            int minutiSvolti)
+            int minutiSvolti);
 
 
     //Getter
