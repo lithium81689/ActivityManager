@@ -27,6 +27,8 @@ qt_add_executable(ActivityManager
     model/Ricevimento.cpp
     model/AgendaUniversitaria.cpp
     model/AttivitaStudio.h
+    gui/mainwindow.h
+    gui/mainwindow.cpp
 )
 
 target_include_directories(ActivityManager

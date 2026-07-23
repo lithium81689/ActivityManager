@@ -4,9 +4,9 @@
 #include <QJsonObject>
 
 Consegna::Consegna(
-    QString& titolo,
-    QString& descrizione,
-    QDate& data,
+    const QString& titolo,
+    const QString& descrizione,
+    const QDate& data,
     Priority priority,
     const QString& materia,
     const QTime& orarioConsegna,

@@ -1,10 +1,11 @@
 #ifndef ATTIVITASTUDIO_H
 #define ATTIVITASTUDIO_H
 
-#endif // ATTIVITASTUDIO_H
+
 
 #include "AgendaUniversitaria.h"
 #include <QString>
+
 
 class AttivitaStudio : public AgendaUniversitaria {
 
@@ -14,16 +15,18 @@ class AttivitaStudio : public AgendaUniversitaria {
         int minutiPrevisti;
         int minutiSvolti;
 
-    public AttivitaStudio(
-            QString& titolo,
-            QString& descrizione,
-            QDate& data,
+    public:
+        AttivitaStudio(
+            const QString& titolo,
+            const QString& descrizione,
+            const QDate& data,
             Priority priority,
             bool completata,
-            QString& materia,
-            QString& argomento,
+            const QString& materia,
+            const QString& argomento,
             int minutiPrevisti,
-            int minutiSvolti);
+            int minutiSvolti
+        );
 
 
     //Getter
@@ -44,7 +47,9 @@ class AttivitaStudio : public AgendaUniversitaria {
     bool isExpiring(const QDate& date, const QTime& time) const override;
     QString getType() const override;
 
-
-
+    QJsonObject toJson() const override;
 
 };
+
+
+#endif ATTIVITASTUDIO_H

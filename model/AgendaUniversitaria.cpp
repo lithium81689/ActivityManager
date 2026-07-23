@@ -1,9 +1,9 @@
 #include "AgendaUniversitaria.h"
 
 AgendaUniversitaria::AgendaUniversitaria(
-    QString& titolo,
-    QString& descrizione,
-    QDate& data,
+    const QString& titolo,
+    const QString& descrizione,
+    const QDate& data,
     Priority priority,
     bool completata
     )
@@ -44,6 +44,10 @@ void AgendaUniversitaria::setData(const QDate& data) {
 
 void AgendaUniversitaria::setCompletata(bool completata) {
     this->completata = completata;
+}
+
+void AgendaUniversitaria::setPriority(Priority priority) {
+    this->priority = priority;
 }
 
 bool AgendaUniversitaria::isCompletata() const {
