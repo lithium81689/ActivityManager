@@ -15,6 +15,10 @@ qt_standard_project_setup()
 
 qt_add_executable(ActivityManager
     main.cpp
+
+    gui/mainwindow.h
+    gui/mainwindow.cpp
+
     model/AgendaUniversitaria.h
     model/Priority.h
     model/Lezione.h
