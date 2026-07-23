@@ -9,6 +9,7 @@
 
 class Consegna : public AgendaUniversitaria
 {
+
 private:
     QString materia;
     bool lavoroDiGruppo;
@@ -44,9 +45,8 @@ public:
 
     // Persistenza
     QJsonObject toJson() const override;
+
 };
-
-
 
 
 #endif // CONSEGNA_H
