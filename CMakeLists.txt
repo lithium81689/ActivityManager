@@ -38,6 +38,7 @@ qt_add_executable(ActivityManager
 =======
     model/AttivitaStudio.cpp
 >>>>>>> a019447 (implementazione attivitastudio)
+model/Esame.cpp
 )
 
 target_include_directories(ActivityManager
