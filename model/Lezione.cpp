@@ -1,5 +1,5 @@
 #include "Lezione.h"
-
+#include "AgendaVisitor.h"
 #include <QDateTime>
 
 Lezione::Lezione (
@@ -30,6 +30,10 @@ Lezione::Lezione (
 QString Lezione::getType() const
 {
     return QStringLiteral("Lezione");
+}
+
+void Lezione::accept(AgendaVisitor& visitor) const {
+    visitor.visit(*this);
 }
 
 

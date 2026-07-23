@@ -7,6 +7,8 @@
 #include "Priority.h"
 
 
+class AgendaVisitor;
+
 class AgendaUniversitaria {
 
 protected:
@@ -29,7 +31,7 @@ public:
 
     virtual QString getType() const = 0;
     virtual bool isExpiring(const QDate& rifDate, const QTime& rifTime) const = 0;
-    // virtual ...
+    virtual void accept(AgendaVisitor& visitor) const = 0;
 
     QString getTitolo() const;
     void setTitolo(const QString& titolo);

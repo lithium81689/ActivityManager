@@ -1,5 +1,5 @@
 #include "Consegna.h"
-
+#include "AgendaVisitor.h"
 #include <QDateTime>
 #include <QJsonObject>
 
@@ -81,6 +81,10 @@ bool Consegna::isExpiring(const QDate& date, const QTime& time) const {
 QString Consegna::getType() const
 {
     return QStringLiteral("Consegna");
+}
+
+void Consegna::accept(AgendaVisitor& visitor) const {
+    visitor.visit(*this);
 }
 
 

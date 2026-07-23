@@ -31,6 +31,7 @@ public:
 
     QString getType() const override;
     QJsonObject toJson() const override;
+    void accept(AgendaVisitor& visitor) const override;
 
     bool isExpiring(const QDate& rifDate, const QTime& rifTime) const override;
 

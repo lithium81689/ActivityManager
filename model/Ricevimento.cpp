@@ -1,5 +1,5 @@
 #include "Ricevimento.h"
-
+#include "AgendaVisitor.h"
 #include <QJsonObject>
 
 Ricevimento::Ricevimento(
@@ -103,6 +103,10 @@ bool Ricevimento::isExpiring(const QDate& rifDate, const QTime& rifTime) const {
     int secondiRimanenti = rifTime.secsTo(oraInizio);
 
     return secondiRimanenti >= 0 && secondiRimanenti <= 60 * 60;
+}
+
+void Ricevimento::accept(AgendaVisitor& visitor) const {
+    visitor.visit(*this);
 }
 
 QJsonObject Ricevimento::toJson() const {

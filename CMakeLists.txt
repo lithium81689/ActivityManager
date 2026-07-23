@@ -33,6 +33,7 @@ qt_add_executable(ActivityManager
     model/AttivitaStudio.h
     gui/mainwindow.h
     gui/mainwindow.cpp
+    model/AgendaVisitor.h
 )
 
 target_include_directories(ActivityManager

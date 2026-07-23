@@ -38,7 +38,7 @@ public:
     void setLavoroDiGruppo(bool lavoroDiGruppo);
 
     // Comportamenti polimorfi
-    // void accept(AgendaVisitor&)...
+    void accept(AgendaVisitor& visidor) const override;
     bool isExpiring(const QDate& date, const QTime& time) const override;
     QString getType() const override;
 
