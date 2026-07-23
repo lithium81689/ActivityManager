@@ -5,6 +5,7 @@
 
 #include "AgendaUniversitaria.h"
 #include <QString>
+#include <QTime>
 
 
 class AttivitaStudio : public AgendaUniversitaria {
@@ -14,6 +15,7 @@ class AttivitaStudio : public AgendaUniversitaria {
         QString argomento;
         int minutiPrevisti;
         int minutiSvolti;
+        QTime oraInizio;
 
     public:
         AttivitaStudio(
@@ -25,7 +27,8 @@ class AttivitaStudio : public AgendaUniversitaria {
             const QString& materia,
             const QString& argomento,
             int minutiPrevisti,
-            int minutiSvolti
+            int minutiSvolti,
+            const QTime& oraInizio
         );
 
 
@@ -34,17 +37,19 @@ class AttivitaStudio : public AgendaUniversitaria {
         QString getArgomento() const;
         int getMinutiPrevisti() const;
         int getMinutiSvolti() const;
+        QTime getOraInizio() const;
 
     //Setter
-        void setMateria(QString& materia);
-        void setArgomento(QString& argomento);
+        void setMateria(const QString& materia);
+        void setArgomento(const QString& argomento);
         void setMinutiPrevisti(int minutiPrevisti);
         void setMinutiSvolti(int minutiPrevisti);
+        void setOraInizio(const QTime& oraInizio);
 
 
     // Comportamenti polimorfi
     // void accept(AgendaVisitor&)...
-    bool isExpiring(const QDate& date, const QTime& time) const override;
+    double getPercentualeCompletamento() const;
     QString getType() const override;
 
     QJsonObject toJson() const override;
