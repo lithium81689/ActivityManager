@@ -33,12 +33,9 @@ qt_add_executable(ActivityManager
     model/AttivitaStudio.h
     gui/mainwindow.h
     gui/mainwindow.cpp
-<<<<<<< HEAD
     model/AgendaVisitor.h
-=======
     model/AttivitaStudio.cpp
->>>>>>> a019447 (implementazione attivitastudio)
-model/Esame.cpp
+    model/Esame.cpp
 )
 
 target_include_directories(ActivityManager

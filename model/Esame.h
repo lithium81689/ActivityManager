@@ -1,6 +1,7 @@
 #ifndef ESAME_H
 #define ESAME_H
 #include "AgendaUniversitaria.h"
+#include "AgendaVisitor.h"
 #include <QString>
 #include <QDate>
 #include <QTime>
@@ -35,10 +36,10 @@ public:
     QString getModalita() const;
 
     //Setter
-    void setOra(QTime& ora);
-    void setMateria(QString& materia);
-    void setLocation(Location& location);
-    void setModalita(QString modalita);
+    void setOra(const QTime& ora);
+    void setMateria(const QString& materia);
+    void setLocation(const Location& location);
+    void setModalita(const QString& modalita);
 
 
     // Comportamenti polimorfi
@@ -46,6 +47,8 @@ public:
     bool isExpiring(const QDate& date, const QTime& time) const override;
     QString getType() const override;
     QJsonObject toJson() const override;
+    void accept(AgendaVisitor& visitor) const override;
+
 
 };
 

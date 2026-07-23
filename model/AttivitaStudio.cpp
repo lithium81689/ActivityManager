@@ -1,5 +1,5 @@
 #include "AttivitaStudio.h"
-
+#include "AgendaVisitor.h"
 #include <QString>
 #include <QTime>
 
@@ -15,7 +15,7 @@
         const QString& argomento,
         int minutiPrevisti,
         int minutiSvolti,
-        const QTime oraInizio
+        const QTime& oraInizio
 
     )    : AgendaUniversitaria(
             titolo,
@@ -96,6 +96,9 @@
         return QStringLiteral("AttivitaStudio");
     }
 
+    void AttivitaStudio::accept(AgendaVisitor& visitor) const {
+        visitor.visit(*this);
+    }
 
 
     QJsonObject AttivitaStudio::toJson() const

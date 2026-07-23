@@ -2,7 +2,7 @@
 #define ATTIVITASTUDIO_H
 
 
-
+#include "AgendaVisitor.h"
 #include "AgendaUniversitaria.h"
 #include <QString>
 #include <QTime>
@@ -51,8 +51,8 @@ class AttivitaStudio : public AgendaUniversitaria {
     // void accept(AgendaVisitor&)...
     double getPercentualeCompletamento() const;
     QString getType() const override;
-
-    QJsonObject toJson() const override;
+    void accept(AgendaVisitor& visitor) const override;
+        QJsonObject toJson() const override;
 
 };
 
