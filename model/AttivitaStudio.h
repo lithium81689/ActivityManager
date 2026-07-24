@@ -52,7 +52,8 @@ class AttivitaStudio : public AgendaUniversitaria {
     double getPercentualeCompletamento() const;
     QString getType() const override;
     void accept(AgendaVisitor& visitor) const override;
-        QJsonObject toJson() const override;
+    QJsonObject toJson() const override;
+    // bool isExpiring(const QDate& date, const QTime& time) const override;
 
 };
 

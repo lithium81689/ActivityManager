@@ -44,6 +44,8 @@ public:
 
     // Comportamenti polimorfi
     // void accept(AgendaVisitor&)...
+
+    // attività in scadenza quando <= una settimana all'esame
     bool isExpiring(const QDate& date, const QTime& time) const override;
     QString getType() const override;
     QJsonObject toJson() const override;

@@ -101,6 +101,8 @@
     }
 
 
+
+
     QJsonObject AttivitaStudio::toJson() const
     {
         QJsonObject json;

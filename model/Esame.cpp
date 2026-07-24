@@ -66,7 +66,24 @@
         this->modalita = modalita;
     }
 
+    bool Esame::isExpiring(const QDate& rifDate, const QTime& rifTime) const{
+        if (completata) {
+            return false;
+        }
 
+        const QDateTime riferimento(rifDate, rifTime);
+        const QDateTime inizioEsame(data, ora);
+
+        if (!riferimento.isValid() || !inizioEsame.isValid()) {
+            return false;
+        }
+
+        const qint64 secondiMancanti = riferimento.secsTo(inizioEsame);
+
+        const qint64 unaSett = 7 * 24 * 60 * 60;
+
+        return secondiMancanti >= 0 && secondiMancanti <= unaSett;
+    }
 
     QString Esame::getType() const
     {
